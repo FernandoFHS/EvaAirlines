@@ -14,14 +14,3 @@ function initializeChat(instanceUrl, orgId, envId, botId, channelId) {
     document.body.appendChild(chatElement);
 }
 window.initializeChat = initializeChat;
-
-const script = document.querySelector("script[instance-url]");
-if (script) {
-    const instanceUrl = script.getAttribute("instance-url");
-    const orgId = script.getAttribute("org-id");
-    const envId = script.getAttribute("env-id");
-    const botId = script.getAttribute("bot-id");
-    const channelId = script.getAttribute("channel-id");
-    initializeChat(instanceUrl, orgId, envId, botId, channelId);
-}
-
